@@ -11,8 +11,9 @@ function createCharacter(){
 	document.getElementById("myCharacter").innerHTML = characterName;
 	document.getElementById("myStyle").innerHTML = characterStyle + " " + characterRole;
 	// document.getElementById("myRole").innerHTML = characterRole;
-	document.getElementById("myLFNumber").innerHTML = characterLFNumber;
-	document.getElementById("myLFNumber").style.gridColumnStart = characterLFNumber;
+	// document.getElementById("myLFNumber").innerHTML = characterLFNumber;
+	document.getElementById("LF-bar").children[characterLFNumber - 1].id="myLFNumber";
+	// document.getElementById("myLFNumber").style.gridColumnStart = characterLFNumber;
 
 	document.getElementById("character-create").style.display = 'none';
 	document.getElementById("character-card").style.display = 'grid';
@@ -34,10 +35,12 @@ function rollOne(){
 	var rollresult = rollDice(1);
 	var field = document.getElementById('roll-one-result');
 	field.style.backgroundColor = "";
+	field.style.color = "#000";
 	field.innerHTML = rollresult;
 	if(rollresult == characterLFNumber.value){
 		console.log("laserfeelings!");
 		field.style.backgroundColor = "#007DAC";
+		field.style.color = "#fff";
 	}
 }
 

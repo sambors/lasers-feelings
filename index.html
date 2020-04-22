@@ -7,7 +7,7 @@
 	<meta name="description" content="Lasers and Feelings">
 	<meta name="author" content="sambors">
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -63,19 +63,22 @@
 			<button class="form-submit-button" type="button" onclick="createCharacter();">Create</button>
 		</div>
 
-		<script src="script.js"></script>
-
 		<div id="character-card">
-			<span id="myCharacter"></span>
-			<span id="myStyle"></span>
-			<span id="myRole"></span>
+			<div id="myCharacter"></div>
+			<div id="myStyle"></div>
+			<div id="myPortrait"></div>
 			<div id="LF-bar">
-				<span id="myLFNumber"></span>
+				<span class="LF-number">1</span>
+				<span class="LF-number">2</span>
+				<span class="LF-number">3</span>
+				<span class="LF-number">4</span>
+				<span class="LF-number">5</span>
+				<span class="LF-number">6</span>
 			</div>
 		</div>
 
 		<div id="gameplay-area">
-			<h2 class="gameplay-area-title">Roll Here</h2>
+			<h2 class="gameplay-area-title">Try your luck!</h2>
 			<div class="roll-area">
 				<div id="roll-one-result" class="roll-result-area"></div>
 				<button type="button" id="roll-one" onclick="rollOne()">Roll 1d6</button>
@@ -91,6 +94,6 @@
 				<button type="button" id="roll-three" onclick="rollThree()">Roll 3d6</button>
 			</div>
 		</div>
-
+	<script src="script.js"></script>
 </body>
 </html>

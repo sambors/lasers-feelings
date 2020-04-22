@@ -1,0 +1,147 @@
+/*General and Layout*/
+/*======================================*/
+
+html {
+	height: 100%;
+}
+
+body {
+	/*background-color: #0F2A3F;*/
+	/*background-color: #AAD3E7;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(90,28,94,1) 65%, rgba(110,33,72,1) 100%);
+}
+
+.container {
+	display: grid;
+	padding: 1em;
+	width: 50%;
+	margin: 4em auto;
+	background-color: #fff;
+	border-radius: 20px;
+	grid-template-rows: auto;
+	grid-template-columns: 100%;
+}
+
+
+/*Typography*/
+/*======================================*/
+
+h1 {
+	justify-self: center;
+	font-family: 'Orbitron', sans-serif;
+	text-transform: uppercase;
+	font-size: 3em;
+	margin: 0.5em 0;
+	color: #AAD3E7;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-size: 1em;
+	margin: 1em 0;
+	color: #00AEEF;
+}
+
+#lasers-text {
+	color: #00AEEF;
+}
+
+#feelings-text {
+	color: #007DAC;
+}
+
+
+/*Character Creation*/
+/*======================================*/
+
+#character-create {
+	padding: 1em;
+	background-color: #eee;
+}
+
+.form-input {
+	display: block;
+	padding: 0.25em 0;
+}
+
+.form-submit-button {
+ 	width: 8em;
+ 	height: 3em;
+ 	margin-top: 1em;
+ 	transition: all 0.3s;
+}
+
+
+/*Character Card*/
+/*======================================*/
+
+#character-card {
+	display: none;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(4,30px);
+	grid-gap: 1rem;
+	border: 3px solid black;
+}
+
+#myCharacter {
+	grid-row: 1;
+	grid-column: 2; 
+	font-size: 2em;
+	text-transform: capitalize;
+}
+
+#myStyle {
+	grid-row: 2;
+	grid-column: 2;
+	text-transform: capitalize;
+}
+
+#LF-bar {
+	grid-row: 4;
+	grid-column: 2;
+	display:grid;
+	grid-template-columns: repeat(6,auto);
+	background: rgb(0,174,239);
+	background: linear-gradient(90deg, rgba(0,174,239,1) 0%, rgba(0,125,172,1) 100%);
+}
+
+#myLFNumber {
+	color: #fff;
+}
+
+
+/*Gameplay Area*/
+/*======================================*/
+
+#gameplay-area {
+	display: none;
+	grid-gap: 1rem;
+	grid-template-rows: 4em auto; 
+	grid-template-columns: repeat(3,minmax(200px,1fr));
+	justify-items: center;
+}
+
+.gameplay-area-title {
+	grid-column: 1 / span 3;
+}
+
+.roll-area {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-rows: auto;
+	justify-content: center;
+}
+
+.roll-result-area {
+	display: flex;
+  	justify-content: center;
+ 	align-items: center;
+ 	height: 100px;
+	width: 100px;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	font-size: 40px;
+}

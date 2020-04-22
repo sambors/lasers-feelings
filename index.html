@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Lasers & Feelings</title>
+	<meta name="description" content="Lasers and Feelings">
+	<meta name="author" content="sambors">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1><span id="lasers-text">Lasers</span> & <span id="feelings-text">Feelings</span></h1>
+
+		<div id="character-create">
+			<h3>Create your character:</h3>
+			<form action="">
+				<div class="form-input">
+					<label for="characterStyle">Character Style:</label>
+					<select id="characterStyle" name="characterStyle">
+		  				<option value="alien">Alien</option>
+		  				<option value="android">Android</option>
+		  				<option value="dangerous">Dangerous</option>
+		  				<option value="hot-shot">Hot-Shot</option>
+		  				<option value="intrepid">Intrepid</option>
+		  				<option value="savvy">Savvy</option>
+					</select>
+				</div>
+
+				<div class="form-input">
+					<label for="characterRole">Character Role:</label>
+					<select id="characterRole" name="characterRole">
+		  				<option value="doctor">Doctor</option>
+		  				<option value="envoy">Envoy</option>
+		  				<option value="engineer">Engineer</option>
+		  				<option value="explorer">Explorer</option>
+		  				<option value="pilot">Pilot</option>
+		  				<option value="scientist">Scientist</option>
+		  				<option value="soldier">Soldier</option>
+					</select>
+				</div>
+
+				<div class="form-input">
+					<label for="characterLFNumber">Choose your number:</label>
+					<select id="characterLFNumber" name="characterLFNumber">
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+
+				<div class="form-input">
+					<label for="characterName">Character Name:</label>
+					<input id="characterName" name="characterName" type="text" placeholder="Your Name...">
+				</div>
+			</form>
+			
+
+			<button class="form-submit-button" type="button" onclick="createCharacter();">Create</button>
+		</div>
+
+		<script src="script.js"></script>
+
+		<div id="character-card">
+			<span id="myCharacter"></span>
+			<span id="myStyle"></span>
+			<span id="myRole"></span>
+			<div id="LF-bar">
+				<span id="myLFNumber"></span>
+			</div>
+		</div>
+
+		<div id="gameplay-area">
+			<h2 class="gameplay-area-title">Roll Here</h2>
+			<div class="roll-area">
+				<div id="roll-one-result" class="roll-result-area"></div>
+				<button type="button" id="roll-one" onclick="rollOne()">Roll 1d6</button>
+			</div>
+
+			<div class="roll-area">
+				<div id="roll-two-result" class="roll-result-area"></div>
+				<button type="button" id="roll-two" onclick="rollTwo()">Roll 2d6</button>
+			</div>
+
+			<div class="roll-area">
+				<div id="roll-three-result" class="roll-result-area"></div>
+				<button type="button" id="roll-three" onclick="rollThree()">Roll 3d6</button>
+			</div>
+		</div>
+
+</body>
+</html>
